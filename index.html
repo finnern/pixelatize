@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>pixelatize</title>
+    
+    <style type="text/css">
+      * { font-family: monospace; }
+      label { font-weight: bold; display: block; margin: 10px 0; }
+      small { font-size: .5em; background-color: yellow }
+      .hidden { display: none; }
+      .tool { margin: 10px auto; }
+      footer { margin: 50px auto; }
+      span { display: inline-block; padding: 5px; background-color: cyan; }
+    </style>
+      
+  </head>
+  <body>
+  
+  <h1>pixelatize <small>pixelates (pixelizes?) your images</small></h1>
+  
+  <div id="inputs">
+    <label for="pixel-size">pick a pixel size: <input type="number" id="pixel-size" name="pixel-size" min="1" value="15"></label>
+    <label for="image-upload">upload an image: <input type="file" id="image-upload" name="image-upload"/></label>
+  </div>
+  
+  <canvas id="image">Your browser doesn't support canvas, yell at your employer about it.</canvas>
+  
+  <div id="image-enhance" class="hidden tool">
+    <input type="submit" value="~*enhance*~" />
+  </div>
+  
+  <div id="image-fade" class="hidden tool">
+    <input type="submit" value="*~fade~*" />
+  </div>
+  
+  <div id="image-save" class="hidden tool">
+    <input type="submit" value="save image" />
+  </div>
+  
+  <footer>
+    <span>made by <a href="http://jennmoney.biz">jennmoneydollars</a> lol</span>
+  </footer>
+  
+  <script src="jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="pixelatize.js" type="text/javascript"></script>
+  
+  </body>
+</html>
